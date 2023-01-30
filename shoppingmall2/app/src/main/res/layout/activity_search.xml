@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SearchActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_theme"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_back"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/def_button_bg"
+        android:text="返回"
+        android:onClick="backClick"
+        android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center|top"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_search_container"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/relativeLayout"
+        android:background="@drawable/search_btn_bg"
+        android:padding="5dp">
+        <EditText
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/et_search_content"
+            style="?android:attr/textViewStyle"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:hint="搜索"
+            android:textSize="16sp"
+            android:padding="2dp"
+            android:textColor="#FF666666"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ib_search_btn"
+            android:background="@null"
+            android:padding="0dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/search_drawable_left"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView_search"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ll_search_container"/>
+
+    <LinearLayout
+        android:id="@+id/loading_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="玩命加载中..."
+            />
+    </LinearLayout>
+</RelativeLayout>

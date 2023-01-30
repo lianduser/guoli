@@ -1,0 +1,23 @@
+R_DEF: Internal format may change without notice
+local
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
+drawable arrow_left
+drawable arrow_left_focus
+drawable arrow_left_selector
+drawable arrow_right
+drawable arrow_right_focus
+drawable arrow_right_selector
+drawable ic_launcher
+drawable image_indicator
+drawable image_indicator_focus
+id indicater_layout
+id left_button
+id right_button
+id view_pager
+layout image_indicator_layout
+string action_settings
+string app_name
+string hello_world
+style AppBaseTheme
+style AppTheme

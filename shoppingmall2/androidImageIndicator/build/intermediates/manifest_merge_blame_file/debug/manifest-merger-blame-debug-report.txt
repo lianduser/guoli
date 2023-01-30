@@ -1,0 +1,14 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.app.library.common.view"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->D:\android\shoppingmall2\androidImageIndicator\src\main\AndroidManifest.xml:7:5-9:41
+8        android:minSdkVersion="14"
+8-->D:\android\shoppingmall2\androidImageIndicator\src\main\AndroidManifest.xml:8:9-34
+9        android:targetSdkVersion="32" />
+9-->D:\android\shoppingmall2\androidImageIndicator\src\main\AndroidManifest.xml:9:9-38
+10
+11</manifest>
