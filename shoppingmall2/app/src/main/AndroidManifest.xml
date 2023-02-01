@@ -56,6 +56,22 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".ui.OrdersActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Shoppingmall2.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.EditAddressActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Shoppingmall2.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.AddressManagerActivity"
             android:exported="false"
             android:theme="@style/Theme.Shoppingmall2.NoActionBar">

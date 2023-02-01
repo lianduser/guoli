@@ -8,7 +8,7 @@ public class Orders extends BmobObject{
 
     private String userId;//用户编号
     private String bookInfoId;//图书ID
-    private int status;//状态 (1未付款，2已付款，3已发货，4配送中，5已收货，6已评价)
+    private int status;//状态 (1未付款，2已付款，3已发货，4已收货，5已评价)
     private double subtotal;//小计
     private int total;//购买数量
     private double discountPrice;//单价
