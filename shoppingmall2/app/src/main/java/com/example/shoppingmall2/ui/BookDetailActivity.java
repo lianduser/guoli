@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -57,6 +58,7 @@ public class BookDetailActivity extends BaseActivity implements View.OnClickList
     private RatingBar ratingBar_star;
     private ArrayList<Comment> comment;
     private int commentNumber;
+    private LinearLayout linearLayout4_comment;
 
     //加入购物车
     private Button button_Shopping_Cart;
@@ -86,6 +88,8 @@ public class BookDetailActivity extends BaseActivity implements View.OnClickList
         initBook();
 
         //评论
+        linearLayout4_comment = findViewById(R.id.linearLayout4_comment);
+        linearLayout4_comment.setOnClickListener(this);
         textView11_username = findViewById(R.id.textView11_username);
         textView12_createdAt = findViewById(R.id.textView12_createdAt);
         textView13_comment_content = findViewById(R.id.textView13_comment_content);
@@ -141,6 +145,16 @@ public class BookDetailActivity extends BaseActivity implements View.OnClickList
             case R.id.imageView_shopping_cart:
                 Intent intent = new Intent(this,ShorppingCartActivity.class);
                 startActivity(intent);
+                break;
+            //进入评价页面
+            case R.id.linearLayout4_comment:
+                if (commentNumber > 0){
+                    Intent intent1 = new Intent(this,CommentActivity.class);
+                    intent1.putExtra("bookInfoId",bookInfo.getObjectId());
+                    startActivity(intent1);
+                }else {
+                    showToast("该商品无评论");
+                }
                 break;
         }
     }

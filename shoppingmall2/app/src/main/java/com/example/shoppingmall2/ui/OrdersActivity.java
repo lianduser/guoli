@@ -100,6 +100,11 @@ public class OrdersActivity extends BaseActivity implements View.OnClickListener
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        if(orderStatus == 4){
+            Orders orders = ordersList.get(position);
+            Intent intent = new Intent(this,EvaluationActivity.class);
+            intent.putExtra("orders",orders);
+            startActivity(intent);
+        }
     }
 }

@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "shoppingmall2"
 include ':app'
 include ':androidImageIndicator'
+
